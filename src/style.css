@@ -1,12 +1,22 @@
-html {
-  color: black;
-}
-
-.form {
-  margin-bottom: 20px ;
-}
 
 .field {
   display: block;
-  margin: 0 0 10px;
+  margin-top: 5px;
+}
+
+.container {
+  display: inline-block;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.frame :nth-child(1) {
+  margin-top: 8px;
+}
+
+.button {
+  border-radius: 5px;
+  margin-top: 20px;
 }

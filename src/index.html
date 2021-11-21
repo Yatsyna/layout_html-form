@@ -9,12 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
   </head>
   <body>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+    <form class="frame"
+    action="https://mate-academy-form-lesson.herokuapp.com/create-application"
           method="post"
           onsubmit="onSubmit()">
-      <fieldset class="form">
+      <fieldset class="form" name="personalInfo">
         <legend>Personal information</legend>
         <label for="surname" class="field">
           Surname:
@@ -22,7 +24,7 @@
                  type="text"
                  placeholder="surname"
                  autocomplete="off"
-          >
+            >
         </label>
         <label for="name" class="field">
           Name:
@@ -59,7 +61,7 @@
           >
         </label>
       </fieldset>
-      <fieldset class="form">
+      <fieldset class="form" name="register">
         <legend>Registration</legend>
         <label for="email" class="field">E-mail:
           <input type="email"
@@ -76,35 +78,40 @@
           >
         </label>
       </fieldset>
-      <fieldset class="form">
+      <fieldset class="form" name="funFact">
         <legend>An interesting fact about you!
         </legend>
-        <label for="yes" class="radio">Do you love cats?
-          <input type="radio"
-                   id="yes"
+        <div class="container">
+          Do you love cats?
+          <label for="yes" class="inline">Yes
+            <input type="radio"
+                id="yes"
+                name="choice"
+                value="yes"
+            >
+          </label>
+          <label for="no" class="inline">No
+            <input type="radio"
+                 id="no"
                  name="choice"
-                 value="yes"
-            >Yes
-        </label>
-        <label for="no" class="radio">
-          <input type="radio"
-                   id="no"
-                   name="choice"
-                   value="no"
-            >No
-        </label>
-
-        <label for="color" class="field">What is your favorite color?
+                value="no"
+            >
+          </label>
+        </div>
+        <label for="color" class="field">
+          What is your favorite color?
           <input id="color"
                 type="color"
           >
         </label>
-        <label for="sleep" class="field">What time do you go to bed?
+        <label for="sleep" class="field">
+          What time do you go to bed?
           <input id="sleep"
                 type="time"
           >
         </label>
-        <label for="carlist" class="field">What are your favorite brand of cars?
+        <label for="carlist" class="field">
+          What are your favorite brand of cars?
           <select name="cars"
                   id="carlist"
                   size="4"
@@ -117,38 +124,42 @@
             <option value="emty" hidden></option>
           </select>
         </label>
-        <label for="feedback" class="field">How do you rate our work?
+        <label for="feedback" class="field">
+          How do you rate our work?
           <input id="feedback"
-                  type="range"
+                 type="range"
                   min="0"
                   max="100"
                   step="10"
           >
         </label>
       </fieldset>
-      <fieldset class="form">
+      <fieldset class="form"
+                name="additionalInfo">
         <legend>Additional info:
         </legend>
-        <div class="field">
-          <label for="comment">Comments:
+        <div class="feed">
+          <label for="comment"
+                 class="field">Comments:
             <textarea id="comment"
-                  rows="2"
-                  cols="15"
+                      rows="2"
+                      cols="15"
             >
             </textarea>
           </label>
         </div>
-        <label for="recommend" class="field">Would you recommend us?
+        <label for="recommend" class="field">
+          Would you recommend us?
           <select id="recommend">
             <option value="yes" selected>yes</option>
             <option value="no">no</option>
           </select>
         </label>
       </fieldset>
-      <div class="form">
-        <button type="submit">Submit</button>
-      </div>
+      <button class="button" type="submit">Submit</button>
     </form>
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript"
+            src="./main.js">
+    </script>
   </body>
 </html>
